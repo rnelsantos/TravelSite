@@ -75,13 +75,36 @@ table {
 
 .content{
     position:sticky;
-    height:1000px;
+    height:8000px;
 }
 
 .banner{
-    height:50px;
+    width: 100vw;
+    height: 100vh;
     
+}
+img.banner{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.navBar-initial { /*Navigation Bar*/ 
+    box-sizing: border-box;
+    Display:flex;
+    justify-content: Center;
+    align-items:stretch;
+    Margin:0px;
+    justify-content: space-between;
+    border: 0px solid green;
+    flex:1;
+    flex-basis:auto;
     
+    position:sticky;
+    top: 0;
+    bottom:25px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.13), rgba(180, 159, 99, 0.5)40%);
+    Height: 50px;
 }
 
 .navBar-up { /*Navigation Bar*/ 
@@ -97,9 +120,9 @@ table {
     
     position:sticky;
     top: 0;
-    background-image: linear-gradient(to bottom, rgb(218, 203, 7), rgb(248, 185, 10)40%);
+    bottom:25px;
+    background-image: linear-gradient(to bottom, rgb(218, 203, 7), rgb(190, 141, 5)40%);
     Height: 50px;
-
 }
 
 
@@ -116,9 +139,9 @@ table {
     position:sticky;
     top: 0;
 
-    background-image: linear-gradient(to bottom, rgb(218, 203, 7), rgb(248, 185, 10)40%);
+    background-image: linear-gradient(to bottom, rgb(218, 203, 7), rgb(221, 162, 0)40%);
     Height: 30px;
-    transition:0.5s;
+    transition:0.s;
 }
 
 
@@ -188,6 +211,7 @@ transition: 0.3s;
     }
 
 .theme{
+    align-self: center;;
     border: 1px solid blue;
     Padding:10px;
 }
