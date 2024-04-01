@@ -79,14 +79,27 @@ table {
 }
 
 .banner{
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-}
-img.banner{
+
     width: 100vw;
     height: 100vh;
+    background-image: url('./images/banner_sunset.png');
+    background-size: cover;
+    background-position:center;
 }
+
+.welcome{
+    background-image: linear-gradient(to bottom, rgba(170, 232, 248, 0.651), rgba(207, 106, 10, 0.582));
+    border: 0px solid yellow;
+    text-align: center;
+    height:60vh;
+    width:50vw;
+    border-radius:20px;
+}
+
 
 
 .navBar-initial { /*Navigation Bar*/ 
@@ -99,12 +112,12 @@ img.banner{
     border: 0px solid green;
     flex:1;
     flex-basis:auto;
-    
+    color:white;
     position:sticky;
     top: 0;
     bottom:25px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.13), rgba(180, 159, 99, 0.5)40%);
-    Height: 50px;
+    background-image: linear-gradient(to bottom, rgba(251, 255, 0, 0.26), rgba(162, 185, 29, 0.76));
+    Height: 15px;
 }
 
 .navBar-up { /*Navigation Bar*/ 
@@ -191,7 +204,7 @@ img.banner{
     align-self:stretch;
     list-style-type: none;
 } 
-a {
+.Pages ul > li > a {
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px;
@@ -200,6 +213,8 @@ a {
     font-size: 14px;
     font-weight: bold;
 }
+
+
 .Pages ul > li:hover{
 background-color:maroon;
 transition: 0.3s;

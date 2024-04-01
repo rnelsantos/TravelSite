@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
     } else if (scrollPosition < lastScrollPosition) {
        // console.log("Scrolling up!");
         navBar.classList.remove("navBar-down");
-       
+        navBar.classList.add("navBar-up");
         logo.classList.remove("logo-down")
     }
     
