@@ -87,7 +87,7 @@ table {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    justify-content: center;
+  
     gap:20px;
 
     width: 100vw;
@@ -111,7 +111,7 @@ table {
     color:white;
     font-size:45px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 3px 5px 2px #333333b2, 6px 5px 12px rgb(184, 184, 184);
+    text-shadow: 3px 5px 2px #1f1f1fd7, 6px 5px 12px rgba(184, 184, 184, 0.568);
 }
 
 .search{
@@ -141,7 +141,7 @@ table {
     position:sticky;
     top: 0;
     bottom:25px;
-    background-image: linear-gradient(to bottom, rgba(218, 204, 7, 0.747), rgba(190, 141, 5, 0.829)40%);
+    background-image: linear-gradient(to bottom, rgba(218, 204, 7, 0.349), rgba(190, 141, 5, 0.829)40%);
     Height: 45px;
     width:100vw;
 
@@ -226,8 +226,8 @@ table {
     display:flex;
 
     width: 40rem;
-    justify-content: 
 }
+
 .Pages ul > li {   /*Page links*/ 
     display:flex;
     align-items: center;
@@ -238,7 +238,9 @@ table {
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px;
-    color: maroon;
+    color: #d9d9d9;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+
     font-family: Arial, sans-serif; /* Font family with fallback */
     font-size: 14px;
     font-weight: bold;
@@ -246,9 +248,15 @@ table {
 
 
 .Pages ul > li:hover{
-background-color:maroon;
+box-sizing: border-box;
+border-bottom:4px solid maroon;
 transition: 0.3s;
 }
+
+.current-tab{
+    background-color:maroon;
+    color:white;
+    }
 
 .Pages ul > li:hover a{
     color:white;
@@ -264,8 +272,53 @@ transition: 0.3s;
 /*end of navBar*/
 
 /*---------------------------------Home-----------------------------------*/
-.home{
-    border: 5px solid red;
+.home-container{
+    background-color: rgb(35, 27, 43);
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.home-content{
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
+}
+
+.about-container{
+    background-color: rgb(27, 43, 42);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.about-content{
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
+}
+
+.services-container{
+    background-color: rgb(43, 27, 27);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.services-content{
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
