@@ -21,9 +21,7 @@ const initialHeight = window.innerHeight;
   const finalServicesPosition = servicesPosition + scrollPosition;
 
 
-
-
-// scroll to target container function
+// scroll function to target container
   function scrollToTarget(finalPosition) {
     console.log("clicked")
     const startPosition = window.scrollY;
@@ -76,3 +74,14 @@ const initialHeight = window.innerHeight;
     scrollToTarget(finalServicesPosition);
   });
   
+
+
+
+  
+  const updatesTab = document.querySelector("#about-tab");
+  const updatesClass = updatesTab.classList;
+
+if (updatesClass[0] === "current-tab") {
+    scrollToTarget(finalAboutPosition);
+}
+

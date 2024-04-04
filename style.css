@@ -73,12 +73,12 @@ table {
 /*---------------------------------Banner above navBar-----------------------------------*/
 :root{
     background:rgb(29, 28, 28);
-    
+    position:relative;
 }
 
 .content{
     position:sticky;
-    height:8000px;
+    height:100%;
 }
 
 .banner-container{
@@ -95,7 +95,7 @@ table {
     background-image: url('./images/banner_sunset.png');
     background-size: cover;
     background-position:center;
-    
+    background-attachment:fixed;
 }
 
 .welcome{
@@ -322,3 +322,77 @@ transition: 0.3s;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
+
+
+
+.updates-container{
+    background-color: rgb(255, 174, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/banner_sunset.png');
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+.updates-content{
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
+}
+
+
+
+.updates-title{
+    color:white;
+    font-size:35px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #1f1f1fd7, 6px 5px 12px rgba(184, 184, 184, 0.568);
+}
+
+
+.fb-container{
+    
+    display:flex;
+    text-align:center;
+    margin:10px;
+    width:100vw;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, rgba(170, 232, 248, 0.651), rgba(207, 106, 10, 0.582));
+    border: 0px solid yellow;
+}
+
+.fb-page{
+    width:300%;
+    height:100%;
+}
+
+.updates-info{
+    border:2px solid maroon;
+    margin:1rem;
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height:100%;
+    width:100%;
+    color:white;
+    font-size:35px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #1f1f1fd7, 6px 5px 12px rgba(184, 184, 184, 0.568);
+}
+
+
