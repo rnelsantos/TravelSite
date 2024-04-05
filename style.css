@@ -48,7 +48,9 @@ table {
 }
 /*Meyer Resets */
 
-
+h2{
+    font-size: 2rem;
+}
 
 
 
@@ -290,27 +292,99 @@ transition: 0.3s;
 }
 
 .about-container{
-    background-color: rgb(27, 43, 42);
+    background-color: rgb(234, 245, 187);
+    /*background-image: url('./images/st.dominic.png');
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+*/
+
+background-image: url('./images/banner_sunset.png');
+background-size: cover;
+background-position:center;
+background-attachment:fixed;
+
     width: 100vw;
     height: 100vh;
 
-    display: flex;
-    flex-direction:column;
+    overflow:hidden;
+    display:flex;
     justify-content: center;
     align-items: center;
+    
 }
-.about-content{
-    color:white;
-    font-size:45px;
+.about-content{ /*CONTAINER*/
+   
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    min-width: 800px;
+    height:90vh;
+    color:rgb(0, 0, 0);
+    font-size:1rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
 
+.about-details{ /*white body*/
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height:100%;  
+    border-top-left-radius: 20px;
+    border-bottom-left-radius:20px ;
+}
+    .about-paragraph{ /*WORDS*/
+    margin:3rem;
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: baseline;
+    height:80vh;  
+    
+    }
+    .accreditations{
+        overflow:hidden;
+        max-width:px;
+        margin:auto;
+        flex:1;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items:center;
+
+    }
+        .abt-logo{
+            margin:auto;
+            display:flex;
+            justify-content: center;
+            flex:1;
+            flex-basis:0;
+            max-width:200px;
+            max-height:100px;
+        }
+        
+
+.about-portait{
+    background-image: url('./images/st.dominic.png');
+    background-size: cover;
+    background-position:center;
+    overflow:hidden;
+    display:flex;
+
+    height:100%;
+    width: 40%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius:20px ;
+}
+
+
+
+/*services-----------------------------------------------*/
 .services-container{
+
     background-color: rgb(43, 27, 27);
     width: 100vw;
     height: 100vh;
-
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -324,7 +398,7 @@ transition: 0.3s;
 }
 
 
-
+/*--updates css-----------------------------------------------------------------------------------*/
 .updates-container{
     background-color: rgb(255, 174, 0);
     width: 100vw;
