@@ -332,7 +332,7 @@ background-attachment:fixed;
     height:100%;  
     border-top-left-radius: 20px;
     border-bottom-left-radius:20px ;
-    
+    overflow:hidden;
 }
     .about-paragraph{ /*WORDS*/
     margin:3rem;
