@@ -3,6 +3,13 @@
 const navBar = document.querySelector("#navBar");
 const logo = document.querySelector(".logo");
 
+logo.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    localStorage.setItem('current-tab','logo-tab')
+    window.location.href = 'index.html';
+  });
+
+
 window.addEventListener('scroll', function() {
     const scrollPosition = window.scrollY; // or document.documentElement.scrollTop for older browsers
 

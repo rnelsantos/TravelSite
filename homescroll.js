@@ -60,7 +60,7 @@ function detectTab(clickedTab) {
 
 
 
-
+//Scroll to chosen tab (if already in index.html)
  homeTab.addEventListener('click', () => {
     detectTab(homeTab);
     scrollToTarget(finalHomePosition);
@@ -77,31 +77,24 @@ function detectTab(clickedTab) {
     e.preventDefault();
     detectTab(servicesTab);
     scrollToTarget(finalServicesPosition);
-
-
   });
   
  
 
-
-
-
-  const updatesTab = document.querySelector("#home-tab");
-  const updatesClass = updatesTab.classList;
-
-if (localStorage.getItem('current-tab') === "current-tab") {
+//Scroll to chosen tab (if coming  from non-index.html)
+if (localStorage.getItem('current-tab') === "home-tab") {
     scrollToTarget(finalHomePosition);
-    localStorage.setItem('current-tab','home-tab')
+    localStorage.setItem('current-tab','logo-tab')
 }
 
 
 if (localStorage.getItem('current-tab') === "about-tab") {
     scrollToTarget(finalAboutPosition);
-    localStorage.setItem('current-tab','home-tab')
+    localStorage.setItem('current-tab','logo-tab')
 }
 
 
 if (localStorage.getItem('current-tab') === "services-tab") {
     scrollToTarget(finalServicesPosition);
-    localStorage.setItem('current-tab','home-tab')
+    localStorage.setItem('current-tab','logo-tab')
 }
