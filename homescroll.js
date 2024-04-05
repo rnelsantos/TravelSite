@@ -1,87 +1,107 @@
 const initialWidth = window.innerWidth;
 const initialHeight = window.innerHeight;
 
+const homeContainer = document.querySelector(".home-container");
+const aboutContainer = document.querySelector(".about-container");
+const servicesContainer = document.querySelector(".services-container");
 
-  const homeContainer = document.querySelector(".home-container");
-  const aboutContainer = document.querySelector(".about-container");
-  const servicesContainer = document.querySelector(".services-container");
-
-  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
 
-  const homePosition = homeContainer.getBoundingClientRect().top;
-  const aboutPosition = aboutContainer.getBoundingClientRect().top;
-  const servicesPosition = servicesContainer.getBoundingClientRect().top;
+const homePosition = homeContainer.getBoundingClientRect().top;
+const aboutPosition = aboutContainer.getBoundingClientRect().top;
+const servicesPosition = servicesContainer.getBoundingClientRect().top;
 
 
 //home about services
 
-  const finalHomePosition = homePosition + scrollPosition;
-  const finalAboutPosition = aboutPosition + scrollPosition;
-  const finalServicesPosition = servicesPosition + scrollPosition;
+const finalHomePosition = homePosition + scrollPosition;
+const finalAboutPosition = aboutPosition + scrollPosition;
+const finalServicesPosition = servicesPosition + scrollPosition;
 
+// FUNCTIONS--------------------------------------------------------------------------
 
 // scroll function to target container
-  function scrollToTarget(finalPosition) {
-    console.log("clicked")
-    const startPosition = window.scrollY;
-    const distance = finalPosition - startPosition;
-    let start = null;
-  
-    function animation(currentTime) {
-      if (start === null) start = currentTime;
-      const elapsed = currentTime - start;
-      const duration = 500; // Adjust this value to control the animation speed
-      const progress = Math.min(elapsed / duration, 1);
-      const scrollPosition = startPosition + distance * progress;
-      window.scrollTo(0, scrollPosition);
-  
-      if (progress < 1) {
-        window.requestAnimationFrame(animation);
-      }
-    }
-  
+function scrollToTarget(finalPosition) {
+const startPosition = window.scrollY;
+const distance = finalPosition - startPosition;
+let start = null;
+
+function animation(currentTime) {
+    if (start === null) start = currentTime;
+    const elapsed = currentTime - start;
+    const duration = 500; // Adjust this value to control the animation speed
+    const progress = Math.min(elapsed / duration, 1);
+    const scrollPosition = startPosition + distance * progress;
+    window.scrollTo(0, scrollPosition);
+
+    if (progress < 1) {
     window.requestAnimationFrame(animation);
-  }
-  
-//home about services
+    }
+}
+window.requestAnimationFrame(animation);
+}
+
+//function to detect and select current page tab
+function detectTab(clickedTab) {
+    currentTab = document.querySelector(".current-tab");
+    if (currentTab !== null){ currentTab.classList.remove("current-tab");}
+    clickedTab.classList.remove("current-tab");
+    clickedTab.classList.add("current-tab");
+}
+
+
   // Event Listeners to scroll to target pages
   let currentTab = document.querySelector(".current-tab");
  
-
   const homeTab = document.querySelector("#home-tab");
-  homeTab.addEventListener('click', () => {
-    currentTab = document.querySelector(".current-tab");
-    if (currentTab !== null){ currentTab.classList.remove("current-tab");}
-    homeTab.classList.remove("current-tab");
-    homeTab.classList.add("current-tab");
+  const aboutTab = document.querySelector("#about-tab");
+  const servicesTab = document.querySelector("#services-tab");
+
+
+
+
+ homeTab.addEventListener('click', () => {
+    detectTab(homeTab);
     scrollToTarget(finalHomePosition);
   });
 
-  const aboutTab = document.querySelector("#about-tab");
+
   aboutTab.addEventListener('click', () => {
-    currentTab = document.querySelector(".current-tab");
-    if (currentTab !== null){ currentTab.classList.remove("current-tab");}
-    aboutTab.classList.add("current-tab");
+    detectTab(aboutTab);
     scrollToTarget(finalAboutPosition);
   });
 
-  const servicesTab = document.querySelector("#services-tab");
-  servicesTab.addEventListener('click', () => {
-    currentTab = document.querySelector(".current-tab");
-    if (currentTab !== null){ currentTab.classList.remove("current-tab");}
-    servicesTab.classList.add("current-tab");
+ 
+  servicesTab.addEventListener('click', (e) => {
+    e.preventDefault();
+    detectTab(servicesTab);
     scrollToTarget(finalServicesPosition);
+
+
   });
   
+ 
 
 
 
-  
-  const updatesTab = document.querySelector("#about-tab");
+
+  const updatesTab = document.querySelector("#home-tab");
   const updatesClass = updatesTab.classList;
 
-if (updatesClass[0] === "current-tab") {
-    scrollToTarget(finalAboutPosition);
+if (localStorage.getItem('current-tab') === "current-tab") {
+    scrollToTarget(finalHomePosition);
+    localStorage.setItem('current-tab','home-tab')
 }
 
+
+if (localStorage.getItem('current-tab') === "about-tab") {
+    scrollToTarget(finalAboutPosition);
+    localStorage.setItem('current-tab','home-tab')
+}
+
+
+if (localStorage.getItem('current-tab') === "services-tab") {
+    scrollToTarget(finalServicesPosition);
+    localStorage.setItem('current-tab','home-tab')
+}
