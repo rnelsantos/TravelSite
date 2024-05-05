@@ -613,3 +613,58 @@ overflow:hidden;
 }
 
 
+/*--destinations css-----------------------------------------------------------------------------------*/
+.destinations-container{
+    background-color: rgb(255, 174, 0);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/banner_sunset.png');
+    background-size: cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+.destinations-content{
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
+}
+
+
+
+.destinations-title{
+    color:white;
+    font-size:35px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #1f1f1fd7, 6px 5px 12px rgba(184, 184, 184, 0.568);
+}
+
+
+.promo-container{
+    
+    display:flex;
+    text-align:center;
+    margin:10px;
+    width:100vw;
+    overflow:hidden;
+    background-image: linear-gradient(to bottom, rgba(170, 232, 248, 0.651), rgba(207, 106, 10, 0.582));
+    border: 0px solid yellow;
+}
+
+
+
+
+
