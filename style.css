@@ -76,6 +76,9 @@ h2{
 :root{
     background:rgb(29, 28, 28);
     position:relative;
+    overflow-x: hidden;
+    max-width:100wh;
+
 }
 
 .content{
@@ -152,7 +155,7 @@ width:100vw;
     background-image: linear-gradient(to bottom, rgba(218, 204, 7, 0.349), rgba(190, 141, 5, 0.829)40%);
     Height: 45px;
     width:100vw;
-
+    z-index:1;
 }
 
 .navBar-up { /*Navigation Bar*/ 
@@ -281,6 +284,7 @@ transition: 0.3s;
 
 /*---------------------------------Home-----------------------------------*/
 .home-container{
+    padding: 1em;
     background-color: rgb(255, 255, 255);
     width: 100vw;
     height: 100vh;
@@ -296,6 +300,67 @@ transition: 0.3s;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
+/*---------------------------------SLIDES-----------------------------------*/
+.slider-wrapper{
+    position:relative;
+    max-width:700px;
+    margin:0 auto;
+    border-radius:  rem;
+    
+}
+
+.slider{
+    
+    display: flex;
+    height:100vh;
+    width:40wh;
+    overflow-x:auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0.5rem #0c0c0c21, 6px 5px 12px rgba(184, 184, 184, 0.418);
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+  /*  object-fit: cover;*/
+
+}
+
+.slider-nav {
+    display:flex;
+    column-gap:1 rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:0;
+    gap:20px;
+}
+
+.slider-nav a{
+    border:1px solid rgb(155, 0, 0);
+
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+    background-color: yellow;
+
+}
+
+
+
+
+
 
 .about-container{
     background-color: rgb(234, 245, 187);
@@ -420,7 +485,7 @@ background-attachment:fixed;
     font-size:2em;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  
-    
+    text-shadow: 3px 2px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 
 
 }
@@ -459,15 +524,21 @@ overflow:hidden;
     color:white;
     font-size:1em;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 3px 2px 2px #00000044, 6px 5px 12px rgba(172, 172, 172, 0.418);
+    text-shadow: 3px 3px 2px #00000044, 6px 5px 12px rgba(0, 0, 0, 0.718);
 }   
 
 #services-logo{
     color:rgb(255, 255, 255);
     font-size:60px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: transform 0.1s ease-in-out;
     text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
+
+#services-logo:hover {
+    transform: scale(1.2);
+    transition: height 0.5s;
+  }
 
 
 /*--updates css-----------------------------------------------------------------------------------*/
