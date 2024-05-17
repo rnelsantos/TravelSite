@@ -74,11 +74,18 @@ h2{
 
 /*---------------------------------Banner above navBar-----------------------------------*/
 :root{
+    
     background:rgb(29, 28, 28);
     position:relative;
     overflow-x: hidden;
-    max-width:100%;
+    width:110vw;
 
+}
+
+body{
+  
+    width:110vw;
+    z-index: 1;
 }
 
 .content{
@@ -93,7 +100,7 @@ h2{
     justify-content: center;
     align-items: center;
   
-    gap:20px;
+    gap:70px;
 
     width: 100vw;
     height: 100vh;
@@ -104,6 +111,7 @@ h2{
 }
 
 .welcome{
+    gap:25px;
     text-align:center;
     position: relative;
     top:-80px;
@@ -117,6 +125,11 @@ h2{
     font-size:45px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 3px 5px 2px #1f1f1fd7, 6px 5px 12px rgba(184, 184, 184, 0.568);
+}
+
+.oldLogo{
+    height:90px;
+    width:230px;
 }
 
 .search{
@@ -284,7 +297,7 @@ transition: 0.3s;
 
 /*---------------------------------Home-----------------------------------*/
 .home-container{
-    padding:2em;
+    padding-top:4em;
     background-color: rgb(255, 243, 191);
     width: 100vw;
     height: 100vh;
@@ -295,10 +308,12 @@ transition: 0.3s;
 
 }
 .home-content{
-  
+    color:white;
+    font-size:45px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
     color:rgba(145, 3, 3, 0.877);
     font-size:60px;
-    font-family: 'Arial Narrow Bold', sans-serif;
     text-shadow: 3px 1px 1px #979797, 6px 5px 12px rgba(184, 184, 184, 0.418);
 }
 
@@ -315,14 +330,23 @@ transition: 0.3s;
 }
 
 .promoGallery{
-   
-    max-height:100%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-grid-gap:30px;
+    
+    max-width:1200px;
+    width:80%;
+    z-index: 0.5;
+    min-width: 500px;
+    max-height: 100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    grid-auto-rows: minmax(200px ,300px);
+    overflow: hidden;
+    grid-gap:30px;
 }
 
-.promoGallery img{
+.promoGallery img{  /*//actual pic items */
+    max-height: 300px;
+    max-width:200px;
+    overflow:hidden;
     width:100%;
     box-shadow: 3px 1px 3px #3a3939, 6px 5px 12px rgba(36, 35, 35, 0.418);
 }
@@ -405,7 +429,6 @@ background-attachment:fixed;
 
     width: 100vw;
     height: 100vh;
-
     overflow:hidden;
     display:flex;
     justify-content: center;
@@ -482,7 +505,7 @@ background-attachment:fixed;
 /*services-----------------------------------------------*/
 
 .services-container-bg{
-    
+    z-index: 0;
     background-size: cover;
     background-attachment:fixed;
     background-color: rgb(255, 243, 191);
@@ -510,10 +533,11 @@ background-attachment:fixed;
     justify-content: center;
     align-items: center;
     color:white;
-    font-size:2em;
+    font-size:45px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 3px 5px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
  
-    text-shadow: 3px 2px 2px #0c0c0c, 6px 5px 12px rgba(184, 184, 184, 0.418);
+    
 
 
 }
@@ -521,13 +545,19 @@ background-attachment:fixed;
 #services-container{/*CONTAINER*/
 padding:2em;
 background-image: linear-gradient(to bottom, rgba(240, 205, 9, 0.87), rgba(216, 214, 86, 0.863));
-width: 100%;
+width: 100vw;
 height:50vh;  
 overflow:hidden;
+display:flex;
+flex-direction: column;
+align-items: center;
+
+
 }
 
 .services-list-box{
-
+    max-width:1200px;
+    width:80%;
     display:flex;
     flex-wrap: wrap;
     flex:auto;
@@ -535,6 +565,7 @@ overflow:hidden;
     gap:20px;
     align-items: center;
     justify-content: space-around
+
     
 }
 
