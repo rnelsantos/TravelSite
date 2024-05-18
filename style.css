@@ -438,24 +438,25 @@ background-attachment:fixed;
     
 }
 .about-content{ /*CONTAINER*/
-   
+    
     display:flex;
     justify-content: center;
     align-items: center;
     max-width: 1000px;
-    min-width: 800px;
-    height:90vh;
+    min-width: 400px;
+    height:85%;
     color:rgb(0, 0, 0);
     font-size:1rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    gap:10px;
 }
 
 .about-details{ /*white body*/
+   
     background-color: rgb(255, 255, 255);
-    width: 70%;
+    width: 60%;
     height:100%;  
-    border-top-left-radius: 20px;
-    border-bottom-left-radius:20px ;
+    border-radius: 20px;
     overflow:hidden;
 }
     .about-paragraph{ /*WORDS*/
@@ -486,21 +487,80 @@ background-attachment:fixed;
             flex-basis:0;
             max-width:200px;
             max-height:100px;
+            
         }
         
+/* Styles for small screens */
+@media only screen and (max-width: 600px) {
 
-.about-portait{
-    background-image: url('./images/st.dominic.png');
-    background-size: cover;
-    background-position:center;
-    overflow:hidden;
-    display:flex;
+    .about-content{ /*CONTAINER*/
+    
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        min-width: 800px;
+        height:95%;
+        color:rgb(0, 0, 0);
+        font-size:1rem;
+        font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        gap:5px;
+    }
 
-    height:100%;
-    width: 40%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius:20px ;
-}
+    .about-portait{ /*PICTURE*/
+            visibility: hidden;
+        background-image: url('./images/st.dominic.png');
+        background-size: cover;
+        background-position:center;
+        overflow:hidden;
+        display:flex;
+    
+        height:0%;
+        width: 60%;
+        border-radius: 20px;
+        
+    }
+
+    .about-details{ /*white body*/
+   
+        background-color: rgb(255, 255, 255);
+        width: 60%;
+        height:120%;  
+        border-radius: 20px;
+        overflow:hidden;
+    }
+        .about-paragraph{ /*WORDS*/
+        margin:1.5rem;
+        display:flex;
+        flex-direction: column;
+        gap:1rem;
+        justify-content: baseline;
+        height:80vh;  
+
+        }
+  }
+  
+  /* Styles for large screens */
+  @media only screen and (min-width: 600px) {
+    .about-portait{ /*PICTURE*/
+        display:none;
+        background-image: url('./images/st.dominic.png');
+        background-size: cover;
+        background-position:center;
+        overflow:hidden;
+        display:flex;
+    
+        height:100%;
+        width: 40%;
+        border-radius: 20px;
+
+    }
+    }
+  
+
+  
+
 
 
 
@@ -770,20 +830,15 @@ align-items: center;
 }
 
 .gallery-container2{
-    padding-top:4em;
+  
     width: 100vw;
     height: 100%;
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    
-
     max-width:100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding:50px 8%;
   
 }
@@ -796,36 +851,14 @@ align-items: center;
     min-width: 500px;
     max-height: 100%;
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-    grid-auto-rows: minmax(200px ,300px);
+    grid-template-columns:repeat(4, 1fr );
     overflow: hidden;
-    grid-gap:30px;
- 
+    grid-gap:10px;
+    align-items: stretch;
+   
 }
-/*
-.gal1 {
-grid-column: 1/4;
-grid-row:1/2;
-}
-
-.gal2 {
-
-    grid-column: 1/3;
-    grid-row:3/5;
-}
-
-.gal3 {
-    grid-column: 2/4;
-    grid-row:3/5;
-}
-
-.gal5 {
-    grid-area:dubai;
-}
-*/
-
 .photo-container a{
-    border: 3px solid red;
+ 
 }  
 
 
@@ -833,3 +866,32 @@ grid-row:1/2;
    width:100%;
       box-shadow: 3px 1px 3px #3a3939, 6px 5px 12px rgba(36, 35, 35, 0.418);
 }
+
+.gal1 {
+grid-column: 1/4;
+grid-row:1/3;
+}
+
+.gal2 {
+
+    grid-column: 4/5;
+    
+}
+
+.gal3 {
+    grid-column: 1/3;
+    grid-row:3/5;
+}
+
+.gal3 {
+    grid-column: 1/3;
+    grid-row:3/5;
+}
+
+.gal5 {
+    grid-column: 3/5;
+    grid-row:3/5;
+}
+
+
+
