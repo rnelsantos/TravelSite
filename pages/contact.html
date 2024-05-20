@@ -33,7 +33,10 @@
         </div>
     </div>
 
-
+    <div class="full-bleed" id="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.6567134530505!2d120.34608987582959!3d15.927045543227225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339144cde5e16465%3A0x6c33eec6c0e56634!2sSto.Cristo%20Tours%20%26%20Travel!5e0!3m2!1sen!2sph!4v1716189593401!5m2!1sen!2sph" 
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     <div class="wrapper">
     <div class="contact-container">
         <h2 class="contact-title"></h2>
@@ -41,16 +44,15 @@
             <h2> <center>Let us be your travel agency today! </center></h2>
                 <div class = "form">
                         <form class="input-form-container" action="example.com/path" method="post">
-
                             <div class="input-form">
                                 <label for="name">Name:    </label>
-                                <input type="text" id="name"  placeholder="Juan DelaCruz">
+                                <input type="text" id="name" required placeholder="Juan DelaCruz">
                            
                             </div>
 
                             <div class="input-form">
-                                <label for="cpNumber">Phone#:</label>
-                                <input type="text" id="cpNumber"  placeholder="09XXXXXXXX">
+                                <label for="cpNumber" >Phone#:</label>
+                                <input type="text" id="cpNumber" min="1" minlength="11" maxlength="11" required  placeholder="09XXXXXXXX">
                                 <label for="user_email">Email:</label>
                                 <input type="email" id="user_email" placeholder="your_email@gmail.com" required>
                             </div>
@@ -81,17 +83,45 @@
                                 SUBMIT
                                 </span>
                             </button>
-
+                          
                         </div>
                         </form>
 
    
                 </div>
+                
         </div>        
     </div>
     </div>
 
 </div>
+
+
+<footer class="full-bleed">
+    <div class="logo-footer">
+        
+        <img class="old-Logo" alt="logo" src="../images/LOGO_PNG_old.png" class="logo">
+        <img class="sea-logo" src="../images/SeePangasinanLogo_WhiteText.gif">
+        <img class="accredited-logo" src="../images/acrredited.png">
+        <div class="information">
+            <h3>CONTACT INFORMATION</h3> 
+                <p>Email: stocristotoursandtravel@gmail.com</p>
+                <p>Phone: +(63)9088139890</p>
+                <p>Quezon Boulevard, San Carlos City, Philippines, 2420</p>
+       
+                
+
+        </div>
+
+
+    </div>
+    <div class="copyright">
+       <center> © 2011 sto.Cristo Tours and Travel All Rights Reserved.
+                Branding and Website by asantos4 + Peekee Agency </center>
+    </div>
+</footer>
+
+
 
 </body>
 <script src="../javascript.js"></script>
